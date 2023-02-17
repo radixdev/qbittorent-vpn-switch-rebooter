@@ -1,5 +1,7 @@
 # qbittorent-vpn-switch-rebooter
 
+This script detects whether the running qBittorent instance (using the webUi plugin over localhost) needs to be rebooted due to no torrents actually downloading. This frequently happens after the VPN changes IP addresses and qBittorent fails to update.
+
 ## Install
 1. Add a shorcut to qbittorent to this folder and rename it to "qtshortcut".
 2. Run `pip install qbittorrent-api`
