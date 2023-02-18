@@ -14,7 +14,6 @@ Use this to automate running this rebooter task whenever you like.
 
 ![Instructions 1](instructions1.png "1")
 ![Instructions 2](instructions2.png "2")
-![Instructions 3](instructions3.png "3")
 
 - https://pureinfotech.com/prevent-command-window-appearing-scheduled-tasks-windows-10/
--
+![Instructions 3](instructions3.png "3")
