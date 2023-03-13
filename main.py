@@ -46,7 +46,7 @@ for torrent in qbt_client.torrents_info():
     lastChunkDownloadedSecondsAgo = now - torrent.last_activity
     print(f'last chunk was DL {lastChunkDownloadedSecondsAgo} seconds ago. DL speed is {torrent.dlspeed}. Swarm count {swarmCount}')
 
-    if swarmCount > 0 and torrent.dlspeed <= 200 and lastChunkDownloadedSecondsAgo > 240:
+    if swarmCount >= 0 and torrent.dlspeed <= 200 and lastChunkDownloadedSecondsAgo > 60*10:
       print(f'{torrent.name} {torrent.hash} is downloading but is BAD!')
       numBadTorrents += 1
     else:
