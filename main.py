@@ -3,13 +3,17 @@ import qbittorrentapi
 from qbittorrentapi import Client, TorrentStates
 import time
 import json
+import subprocess
 
 def killClient(qbt_client):
   # os.system('cmd /c "taskkill /im qbittorrent.exe"')
   qbt_client.app_shutdown()
 
 def startClient():
-  os.system('cmd /c "start qtshortcut.lnk"')
+  startupinfo = subprocess.STARTUPINFO()
+  startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+  
+  subprocess.Popen(['cmd', '/c', 'start', '', '/B', 'qtshortcut.lnk'], startupinfo=startupinfo)
 
 def displayClientInfo(qbt_client):
   print(f'qBittorrent: {qbt_client.app.version}')
